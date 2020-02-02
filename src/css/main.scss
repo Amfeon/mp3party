@@ -1,0 +1,60 @@
+@import "grid";
+@import 'playlist';
+$bg-color       :     #eaeaea;
+$bg-card        :     #fff;
+$subtitle       :     #db4433;
+$label-color    :     #c8c8c8;
+$main-text-color:     #333333;
+$mainFontSize   : 16px;
+
+
+*{
+  box-sizing: border-box;
+}
+body,html{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+h1,h2,h3,h4,h5,p{
+  margin: 0;
+}
+
+/**---------------*/
+.song-item:nth-child(odd) {
+    background-color: #f4f5fc;
+}
+
+.song-item {
+    padding: 7px 8px 5px;
+    line-height: 18px;
+}
+.add-favorites-btn {
+  float: right;
+  width: 25px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+.add-favorites-btn i {
+  color: #c4d4f6;
+  background-color: yellow;
+  font-size: 25px;
+  top: 50%;
+  width:20px;
+  height: 20px;
+  margin-top: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.playlist .song-item .params {
+  margin-left: 33px;
+}
+.song-item .params {
+  margin-top: -1px;
+  color: #aaa;
+  font-size: 11px;
+}

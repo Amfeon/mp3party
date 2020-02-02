@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="section">
+    <div class="modal-btn" >Modal</div>
+</section>
+<div id="modal"  class="modal modal_hidden">
+    <div class="modal-overlay">
+        <div class="modal-close"></div>
+        <span class="modal__subtitle">Come and say hello</span>
+        <h3 class="modal__title">Register for an <br>Open Day</h3>
+        <div class="modal-card">
+            <div class="modal-card__text"><p>Open Days are the perfect opportunity to get to know us, visit our campus, see acccommodation, meet academics, and get the low-down on the Essex student life.
+            </p></div>
+            <h4 class="modal-card__title">Book your place</h4>
+            <form id= "subscribeForm" action="" class="modal-form" >
+                <div class="input-group-wrapper">
+                    <div class="input-group">
+                        <label class="input-group__label" for="education">I am an</label>
+                        <select class="input-group__select" name="education" id="education" required>
+                            <option class="input-group__option" value=''>Select education</option>
+                            <option class="input-group__option" value="higher">Higher education</option>
+                            <option class="input-group__option" value="Secondary">Secondary education</option>
+                        </select>
+                    </div>
+                <i class="valid"></i>
+                </div>
+                <div class="input-group-wrapper">
+                    <div class="input-group">
+                        <label class="input-group__label" for="campus" >Campus</label>
+                        <select class="input-group__select" name="campus" id="campus" required>
+                            <option value="">Select campus</option>
+                            <option value="Campus1">Colchester Campus</option>
+                            <option value="Campus2">Campus 2</option>
+                        </select>
+                    </div>
+                    <i class="valid "></i>
+                    <span class="alert"></span>
+                </div>
+                <div class="input-group-wrapper input-group-wrapper_half">
+                    <div class="input-group">
+                        <label class="input-group__label" for="date">Date*</label>
+                        <select class="input-group__select" name="date" id="date" required>
+                            <option value="">Select date</option>
+                            <option value="12.06.2019">Sat 12th June</option>
+                            <option value="14.06.2019">Mon 14th June</option>
+                        </select>
+                    </div>
+                    <i class="valid "></i>
+                    <span class="alert"></span>
+                </div>
+                <div class="flex-wrapper">
+                    <div class="input-group-wrapper input-group-wrapper_half">
+                        <div class="input-group">
+                            <label class="input-group__label" for="firstName">First Name*</label>
+                            <input class="input-group__input" type="text" name="name" id="firstName" required>     
+                        </div>
+                        <i class="valid"></i>
+                        <span class="alert"></span>
+                    </div>
+                    <div class="input-group-wrapper input-group-wrapper_half">
+                        <div class="input-group">
+                            <label class="input-group__label" for="lastName">Last Name*</label>
+                            <input class="input-group__input" type="text" name="lastName" id="lastName" required>     
+                        </div>
+                        <i class="valid"></i>
+                        <span class="alert"></span>
+                    </div>
+                </div>
+                <div class="input-group-wrapper">
+                    <div class="input-group">
+                        <label class="input-group__label" for="email">Email Address*</label>
+                        <input class="input-group__input" type="email" name="email" id="email" required>     
+                    </div>
+                    <i class="valid "></i>
+                    <span class="alert"></span>
+                </div>
+                <div class="input-group-wrapper">
+                    <input type="checkbox" id="subscribe" checked>
+                    <label class="input-group__subscribe" for="subscribe">I would like to receive email updates from the University</label>
+                </div>
+
+                <button class="modal-form__btn" type="submit">Make a booking</button>
+            </form>
+            <div class="text-wrapper">
+                <p>
+                    The information provided by you will be held by the University of Essex in accordance with the University's Data protection Policy and may be used for the University's marketing purposes. On occasion we may contact you to advertise events with information relevant to student recruitment. If you do not wish to receive this information, please select the opt out function which can be found at the foot of your confirmation email. You will receive this email within 24 hours of registering.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+$mainFontSize:14px;
+$playlist-title: #9BAEB5;
+@function rem($pixels, $context: $mainFontSize) {
+    @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+    $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+   }
+   
+
+.add-to-playlist{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: .5);
+    z-index: 1;
+    overflow: hidden;
+    .playlist-form{
+          position: absolute;  
+          background-color: #fff;
+          width: 100%;
+          height: 40%;
+          bottom: 0;
+          z-index: 2;
+          padding: rem(20);
+          animation-duration: 0.8s;  /* Время работы анимации */
+          animation-fill-mode: both;  /* Поведение анимации */
+          animation-name: fadeInDown; /* Имя анимации */
+          @keyframes fadeInDown { /* Сама анимация */
+            0% {                /* Старт анимации */
+                opacity: 0;
+                transform: translate(0px,100%);
+            }
+            100% {              /* в финале анимации - финал это заданная 0.55s */
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .playlist__new{
+            padding:20px 0;
+            display: flex;            
+        }
+        .playlist__title{
+            font-size: rem(16);
+            line-height: rem(24);
+            color: $playlist-title;
+        }
+    }
+}
