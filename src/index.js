@@ -1,2 +1,4 @@
 import './css/main.scss'
-import Modal from './main';
+import addToPlayList from './main';
+
+document.querySelector('.fa-star-o').addEventListener('click', addToPlayList)

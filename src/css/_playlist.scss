@@ -8,7 +8,7 @@ $playlist-title: #9BAEB5;
     $context: $context * 1px;
     }
     @return $pixels / $context * 1rem;
-   }
+}
    
 
 .add-to-playlist{
@@ -20,6 +20,7 @@ $playlist-title: #9BAEB5;
     background-color: rgba($color: #000000, $alpha: .5);
     z-index: 1;
     overflow: hidden;
+    visibility: hidden;
     .playlist-form{
           position: absolute;  
           background-color: #fff;
@@ -28,27 +29,53 @@ $playlist-title: #9BAEB5;
           bottom: 0;
           z-index: 2;
           padding: rem(20);
-          animation-duration: 0.8s;  /* Время работы анимации */
-          animation-fill-mode: both;  /* Поведение анимации */
-          animation-name: fadeInDown; /* Имя анимации */
-          @keyframes fadeInDown { /* Сама анимация */
-            0% {                /* Старт анимации */
-                opacity: 0;
-                transform: translate(0px,100%);
-            }
-            100% {              /* в финале анимации - финал это заданная 0.55s */
-                opacity: 1;
-                transform: none;
-            }
-        }
-        .playlist__new{
-            padding:20px 0;
-            display: flex;            
-        }
+
+
         .playlist__title{
             font-size: rem(16);
             line-height: rem(24);
             color: $playlist-title;
         }
+        .playlist__item{
+            padding:20px 0;
+            display: flex;
+        }
+        .playlist-form__header{
+            border-bottom: 2px solid $playlist-title;
+        }
+    }
+    
+    .item__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:20px;
+        height:20px;
+    }
+    .item__text{
+        font-size: rem(16);
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.87);
+        padding-left:25px;
+    }
+}
+
+
+.add-to-playlist_visible{
+    visibility: visible;
+    .playlist-form{
+        animation-duration: 0.8s;  /* Время работы анимации */
+        animation-fill-mode: both;  /* Поведение анимации */
+        animation-name: fadeInDown; /* Имя анимации */
+        @keyframes fadeInDown { /* Сама анимация */
+          0% {                /* Старт анимации */
+              opacity: 0;
+              transform: translate(0px,100%);
+          }
+          100% {              /* в финале анимации - финал это заданная 0.55s */
+              opacity: 1;
+              transform: none;
+          }
+      }
     }
 }
