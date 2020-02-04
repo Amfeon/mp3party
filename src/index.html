@@ -4,6 +4,7 @@
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
     <script src="https://use.fontawesome.com/849b015195.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -32,8 +33,8 @@
                 <div class="playlist__title">
                     Добавить в плейлист
                 </div>
-                <div class="playlist__item">
-                    <div class="item-icon">
+                <div class="playlist__item" id="new-list">
+                    <div class="item__icon" >
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.999854C10 0.444946 9.55229 0 9 0C8.44386 0 8 0.44765 8 0.999854V8H0.999854C0.444946 8 0 8.44771 0 9C0 9.55614 0.44765 10 0.999854 10H8V17.0001C8 17.5551 8.44771 18 9 18C9.55614 18 10 17.5524 10 17.0001V10H17.0001C17.5551 10 18 9.55229 18 9C18 8.44386 17.5524 8 17.0001 8H10V0.999854Z" fill="#EF3E4A"/>
                       </svg>
@@ -43,7 +44,7 @@
             </div>    
 
             <div class="playlist__list">
-                <div class="playlist__item">
+                <div class="playlist__item" id="favorit_item">
                     <div class="item__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.5706 21.6186C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9875 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01182 20.7313 8.81316L15.6046 8.0682C15.6544 8.07545 13.3453 3.44694 13.3453 3.44694C12.7344 2.20903 11.2776 2.20809 10.6662 3.44694L8.37348 8.09253C8.39578 8.04736 3.28026 8.81316 3.28026 8.81316C1.91414 9.01167 1.46308 10.3968 2.45236 11.3612L6.16209 14.9772C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6186L12.0265 19.2079C11.9819 19.2313 16.5706 21.6186 16.5706 21.6186Z" fill="#ffb300"/>
@@ -52,11 +53,9 @@
                     <div class="item__text">Избранное</div>
                     <div class="item__count">137</div>
                   </div>
-                  <div class="playlist__item">
+                  <!-- <div class="playlist__item">
                     <div class="item__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3C14.4633 3 13.0615 3.57771 12 4.52779C10.9385 3.57771 9.53671 3 8 3C4.68629 3 2 5.68629 2 9C2 13.8365 6.97858 18.511 11.5783 21.2383C11.8112 21.3828 12.1924 21.3809 12.4246 21.2363C16.994 18.5 22 13.8362 22 9C22 5.68629 19.3137 3 16 3ZM12.0057 19.1333C7.06067 15.9005 4 12.1242 4 9C4 6.79086 5.79086 5 8 5C8.99954 5 9.93695 5.36538 10.6662 6.01806L11.6285 6.87932C11.8364 7.06548 12.1663 7.06298 12.3715 6.87932L13.3338 6.01806C14.0631 5.36538 15.0005 5 16 5C18.2091 5 20 6.79086 20 9C20 12.2045 16.9507 15.9005 12.0057 19.1333Z" fill="#A6CFE2"/>
-                        </svg>                            
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>                      
                     </div>
                     <div class="item__text">Авто</div>
                     <div class="item__count">10</div>
@@ -69,7 +68,7 @@
                     </div>
                     <div class="item__text">Шейпинг</div>
                     <div class="item__count">8</div>
-                  </div>
+                  </div> -->
             </div>
             
         </div>
@@ -85,8 +84,8 @@
             <div class="form-body">
                 <input type="text" class="form__input" value="Моя музыка">
                 <div class="form-btn-group">
-                    <button class="form__btn">Отмена</button>
-                    <button class="form__btn">Создать</button>
+                    <button class="form__btn" id="cancel">Отмена</button>
+                    <button class="form__btn" id="send">Создать</button>
                 </div>
             </div>
           
