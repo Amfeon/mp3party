@@ -1,5 +1,7 @@
 $mainFontSize:14px;
 $playlist-title: #9BAEB5;
+$add-form-title: #EF3E4A;
+$btn-color     : #320099;
 @function rem($pixels, $context: $mainFontSize) {
     @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
@@ -12,6 +14,9 @@ $playlist-title: #9BAEB5;
    
 
 .add-to-playlist{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     position: absolute;
     top:0;
     bottom: 0;
@@ -25,7 +30,7 @@ $playlist-title: #9BAEB5;
           position: absolute;  
           background-color: #fff;
           width: 100%;
-          height: 40%;
+          height: auto;
           bottom: 0;
           z-index: 2;
           padding: rem(20);
@@ -54,13 +59,17 @@ $playlist-title: #9BAEB5;
     }
     .item__text{
         font-size: rem(16);
-        line-height: 24px;
+        line-height: 20px;
         color: rgba(0, 0, 0, 0.87);
         padding-left:25px;
     }
+    .item__count{
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 20px;
+        color: $playlist-title;
+    }
 }
-
-
 .add-to-playlist_visible{
     visibility: visible;
     .playlist-form{
@@ -77,5 +86,61 @@ $playlist-title: #9BAEB5;
               transform: none;
           }
       }
+    }
+    .add-form{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: calc(100% - 30px);
+        margin: 50px 10px 20px 10px;  
+ 
+        .form__title{
+            display: flex;  
+            align-items: center;   
+            padding:15px 20px; 
+            background-color: $add-form-title; 
+            color:white;
+            svg{
+               fill:white;
+            }
+            h4{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 23px;
+                padding-left:10px
+            }      
+        }    
+        .form-body{
+            padding:15px 20px; 
+            background-color: #fff;            
+        }
+        .form__input{
+            font-size: 16px;
+            line-height: 24px;
+            width:100%;    
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $btn-color;            
+        }
+        .form__btn{
+            background: none; /* Green */
+            border: none;
+            color: $btn-color;
+            padding-left: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            font-family: 'Roboto' sans-serif;
+        }
+        .form-btn-group{
+            display: flex;  
+            text-align: right;  
+            padding-top: 40px;  
+            justify-content: flex-end;                         
+        }
+
     }
 }

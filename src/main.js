@@ -1,6 +1,9 @@
-const modelForm = document.querySelector(".add-to-playlist")
+const modalForm = document.querySelector(".add-to-playlist");
+const addForm = document.querySelector("#add-form");
 
 const addToPlayList = function(){
-    modelForm.classList.add('add-to-playlist_visible')
+    addForm.classList.add('add-to-playlist_visible');
+    let input = addForm.querySelector('input');
+    input.focus();
 }
 export default addToPlayList
