@@ -51,8 +51,8 @@ const submitNewPlayList = function(){
         id: 10,
         trackCount:1
     }
-
-    playList.push(newPlaylist);
+//TODO: сделать запрос на сервер, получить ответ с id нового плей листа и записать в массив.
+    playList.push(newPlaylist); 
     console.log(newPlaylist, playList);
     cancelAddForm();
 }

@@ -1,7 +1,4 @@
-$mainFontSize:14px;
-$playlist-title: #9BAEB5;
-$add-form-title: #EF3E4A;
-$btn-color     : #320099;
+@import 'var';
 @function rem($pixels, $context: $mainFontSize) {
     @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
@@ -114,6 +111,7 @@ $btn-color     : #320099;
         background-color: #fff;
         width: calc(100% - 30px);
         margin: 50px 10px 20px 10px;  
+        box-shadow: 2px 10px 15px rgba(0,0,0,0.5);
  
         .form__title{
             display: flex;  
