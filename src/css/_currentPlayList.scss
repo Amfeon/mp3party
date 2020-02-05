@@ -1,3 +1,22 @@
+.star{
+    cursor: pointer;
+    fill:#fffff1;
+    transition: .3s;
+}
+.star:hover{
+    fill-rule:"nonzero";
+    fill:#FFD101;                                                                                                  
+}
+.more{
+    cursor: pointer;
+    width: 20px;
+    path{
+        transition: .3s;
+    }
+}
+.more:hover path{
+    fill:red;
+}
 .current-playlist{
     padding: 15px 20px;
     .playlist-header{
@@ -46,8 +65,9 @@
         .track-icons{
             display: flex;
             margin-left: auto;
-            width:60px;
+            width:80px;
             justify-content: space-around;
+            align-items: center;
         }
         
     }
