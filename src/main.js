@@ -1,9 +1,12 @@
+import RenderTrack from './render-tracks';
+let a = new RenderTrack();
 const modalForm = document.querySelector(".add-to-playlist");
 const addForm = document.querySelector("#add-form");
 const newList = document.querySelector('#new-list');
 const input = addForm.querySelector('input');
 const currentPlayList = document.querySelector('.playlist__list');
 const favor = document.querySelector('#favorit_item');
+
 let songId;
 favor.addEventListener ("click", addTrackToPlaylist);
 const playList=[
@@ -18,9 +21,6 @@ const playList=[
         trackCount: 10
     }
 ];
-
-
-
 
 const addToPlayList = function(){
     if(this.dataset.songId){
@@ -68,11 +68,12 @@ const submitNewPlayList = function(){
 
 /* добавление трека в массив плейлистов*/
 const addTrackToPlaylist = function (){
-    let id = this.dataset.playlistId;
+    let id = this.dataset.playlistId; //id плейлиста
 
     playList.forEach((item, index)=>{
         if(item.id==id){
-            console.log(songId);
+            // console.log(songId);
+          //  let a = new RenderTrack(id);
             item.trackCount = item.trackCount + 1;
         }
     })
