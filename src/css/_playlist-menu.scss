@@ -1,0 +1,94 @@
+$playlist-title: #9BAEB5;
+
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: .5);
+    z-index: 1;
+    overflow: hidden;
+    visibility: hidden;
+}
+.overlay_visible{
+    visibility: visible;
+    .playlistMenu{
+        animation-duration: 0.8s;  /* Время работы анимации */
+        animation-fill-mode: both;  /* Поведение анимации */
+        animation-name: fadeInUp; /* Имя анимации */
+        @keyframes fadeInUp { /* Сама анимация */
+          0% {                /* Старт анимации */
+              opacity: 0;
+              transform: translate(0px,100%);
+          }
+          100% {              /* в финале анимации - финал это заданная 0.55s */
+              opacity: 1;
+              transform: none;
+          }
+      }
+    }
+}
+/*Playlist menu------------*/
+.playlistMenu{
+    position: absolute;  
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    z-index: 2;
+    padding: 20px;
+    &__header{
+        border-bottom: 2px solid $playlist-title;  
+        display: flex;     
+        flex-direction: column; 
+    }
+    &__title{
+        font-size: 16px;
+        line-height: 24px;
+        color: $playlist-title;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*-----------------------------*/
+
+/* Playlist Item*/
+.playlistItem{
+    padding:20px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__icon{
+        transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:30px;
+        height:30px;
+    }
+    &__title{
+        font-size: rem(16);
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.87);
+        padding-left:25px;
+    }
+    &__count{
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 20px;
+        color: $playlist-title;
+    }
+    &:hover .playlistItem__icon{
+        border-radius: 50%;
+        background-color: rgba(210, 218, 221, 0.7);
+    }
+}
+
+/*-----------------------------*/

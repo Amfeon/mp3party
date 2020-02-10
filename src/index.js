@@ -1,11 +1,6 @@
 import './css/main.scss'
-import addToPlayList from './main';
+import addToPlayList from './playlist-menu';
 
-
-document.querySelector('.fa-star-o').addEventListener('click', addToPlayList)
-
-
-
-
+document.querySelector('.add-favorites-btn').addEventListener('click', addToPlayList);
 
 
