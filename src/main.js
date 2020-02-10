@@ -1,6 +1,6 @@
-import RenderTrack from './render-tracks';
-let a = new RenderTrack();
-const modalForm = document.querySelector(".add-to-playlist");
+import RenderPlaylist from './render-playlist';
+let a = new RenderPlaylist();
+const modalForm = document.querySelector("#add-to-playlist");
 const addForm = document.querySelector("#add-form");
 const newList = document.querySelector('#new-list');
 const input = addForm.querySelector('input');
@@ -22,23 +22,23 @@ const playList=[
     }
 ];
 
-const addToPlayList = function(){
-    if(this.dataset.songId){
-         songId = this.dataset.songId
-    }
+// const addToPlayList = function(){
+//     if(this.dataset.songId){
+//          songId = this.dataset.songId
+//     }
     
-    modalForm.classList.add('add-to-playlist_visible');
-    newList.addEventListener('click', newTitleList);
-    renderPlaylist(songId);
-    modalForm.addEventListener('click',(e)=>{
-       if(e.target===modalForm){
-        modalForm.classList.remove('add-to-playlist_visible');
-       }
-    })
-    document.getElementById('cancel').addEventListener('click', cancelAddForm);
-    document.getElementById('send').addEventListener('click', submitNewPlayList)
+//     modalForm.classList.add('add-to-playlist_visible');
+//     newList.addEventListener('click', newTitleList);
+//     renderPlaylist(songId);
+//     modalForm.addEventListener('click',(e)=>{
+//        if(e.target===modalForm){
+//         modalForm.classList.remove('add-to-playlist_visible');
+//        }
+//     })
+//     document.getElementById('cancel').addEventListener('click', cancelAddForm);
+//     document.getElementById('send').addEventListener('click', submitNewPlayList)
  
-}
+// }
 
 
 const newTitleList = function(){
