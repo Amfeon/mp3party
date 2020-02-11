@@ -1,46 +1,47 @@
+@import 'playlist-add';
+
 $playlist-title: #9BAEB5;
 
 .overlay{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-start;
-    position: absolute;
+    position: fixed;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba($color: #000000, $alpha: .5);
+    background-color: rgba($color: #000000, $alpha: .0);
     z-index: 1;
     overflow: hidden;
-    visibility: hidden;
+   // visibility: hidden;
+    transition:  all .5s;
+
 }
+
+/*animation*/
 .overlay_visible{
-    visibility: visible;
-    .playlistMenu{
-        animation-duration: 0.8s;  /* Время работы анимации */
-        animation-fill-mode: both;  /* Поведение анимации */
-        animation-name: fadeInUp; /* Имя анимации */
-        @keyframes fadeInUp { /* Сама анимация */
-          0% {                /* Старт анимации */
-              opacity: 0;
-              transform: translate(0px,100%);
-          }
-          100% {              /* в финале анимации - финал это заданная 0.55s */
-              opacity: 1;
-              transform: none;
-          }
-      }
-    }
+    background-color: rgba($color: #000000, $alpha: .5);
+    transition: all .5s;
+    display: flex;
+   // visibility: visible;
+
 }
+
 /*Playlist menu------------*/
 .playlistMenu{
-    position: absolute;  
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    //position: absolute;  
     background-color: #fff;
     width: 100%;
     height: auto;
-    bottom: 0;
+  //  bottom: 0;
     z-index: 2;
     padding: 20px;
+   
+   
     &__header{
         border-bottom: 2px solid $playlist-title;  
         display: flex;     
@@ -55,6 +56,35 @@ $playlist-title: #9BAEB5;
         display: flex;
         flex-direction: column;
     }
+    animation-duration: .8s;  /* Время работы анимации */
+    animation-fill-mode: both;  /* Поведение анимации */
+    animation-name: fadeDown; /* Имя анимации */
+    @keyframes fadeDown { /* Сама анимация */
+      0% {                /* Старт анимации */
+          opacity: 1;
+          transform: translate(0px,0px);
+      }
+      100% {              /* в финале анимации - финал это заданная 0.55s */
+          opacity: 0;
+          transform: translate(0px,100%);
+      }
+  }  
+}
+.playlistMenu_animation{
+  
+        animation-duration: 0.8s;  /* Время работы анимации */
+        animation-fill-mode: both;  /* Поведение анимации */
+        animation-name: fadeInUp; /* Имя анимации */
+        @keyframes fadeInUp { /* Сама анимация */
+          0% {                /* Старт анимации */
+              opacity: 0;
+              transform: translate(0px,100%);
+          }
+          100% {              /* в финале анимации - финал это заданная 0.55s */
+              opacity: 1;
+              transform: none;
+          }
+      }    
 }
 /*-----------------------------*/
 
@@ -66,7 +96,7 @@ $playlist-title: #9BAEB5;
     cursor: pointer;
 
     &__icon{
-        transition: .3s;
+        transition:  background-color .3s;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -74,7 +104,7 @@ $playlist-title: #9BAEB5;
         height:30px;
     }
     &__title{
-        font-size: rem(16);
+        font-size: 16px;
         line-height: 20px;
         color: rgba(0, 0, 0, 0.87);
         padding-left:25px;

@@ -1,0 +1,94 @@
+$add-form-title: #EF3E4A;
+.add-form{
+        font-family: 'Roboto' sans-serif;
+        display: flex;
+        max-width: 660px;
+        flex-direction: column;
+        background-color: #fff;
+        width: calc(100% - 30px);
+        margin: 50px 10px 20px 10px;  
+        box-shadow: 2px 10px 15px rgba(0,0,0,0.5);
+    &__header{
+        display: flex;  
+        align-items: center;   
+        padding:15px 20px; 
+        background-color: $add-form-title; 
+        color:white;
+        svg{
+            fill:white;
+         }
+         h4{
+             font-weight: 500;
+             font-size: 20px;
+             line-height: 23px;
+             padding-left:10px
+         }   
+    }
+    &__body{
+        padding:15px 20px; 
+        background-color: #fff; 
+    }
+    &__input{
+        font-size: 16px;
+        line-height: 24px;
+        width:100%;    
+        border: none;
+        outline: none;
+        border-bottom: 2px solid $btn-color;    
+    }
+    &__btnGroup{
+        display: flex;  
+        text-align: right;  
+        padding-top: 40px;  
+        justify-content: flex-end;   
+    }
+    &__btn{
+        background: none; /* Green */
+        border: none;
+        color: $btn-color;
+        padding-left: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        cursor: pointer;
+        padding: 5px 10px;
+        transition: background-color .3s, color .3s;
+        &:hover{
+            background-color: $btn-color;
+            color: white;
+        }
+    }
+    animation-duration: 0.5s;  /* Время работы анимации */
+    animation-fill-mode: both;  /* Поведение анимации */
+    animation-name: fadeInUP; /* Имя анимации */
+    @keyframes fadeInUP { /* Сама анимация */
+        0% {                /* Старт анимации */
+            opacity: 1;
+            transform: translate(0px,0px);
+        }
+        100% {             
+            opacity: 0;
+            transform: translate(0px,-100%);
+        }
+    } 
+
+}
+.add-form_animation{
+        animation-duration: 0.8s;  /* Время работы анимации */
+        animation-fill-mode: both;  /* Поведение анимации */
+        animation-name: fadeInDown; /* Имя анимации */
+        @keyframes fadeInDown { /* Сама анимация */
+            0% {                /* Старт анимации */
+                opacity: 0;
+                transform: translate(0px,-100%);
+            }
+            100% {             
+                opacity: 1;
+                transform: none;
+            }
+        }      
+}
