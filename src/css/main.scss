@@ -36,12 +36,13 @@ h1,h2,h3,h4,h5,p{
     padding: 7px 8px 5px;
     line-height: 18px;
 }
-.add-favorites-btn {
+.add-favorites-btn , .add-more-btn {
   float: right;
   width: 25px;
   height: 30px;
   text-align: center;
   vertical-align: middle;
+    cursor: pointer;
 }
 .add-favorites-btn i {
   color: #c4d4f6;
@@ -52,7 +53,7 @@ h1,h2,h3,h4,h5,p{
   height: 20px;
   margin-top: 4px;
   margin-right: 4px;
-  cursor: pointer;
+
 }
 .playlist .song-item .params {
   margin-left: 33px;

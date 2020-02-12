@@ -57,7 +57,7 @@ $add-form-title: #EF3E4A;
         cursor: pointer;
         padding: 5px 10px;
         transition: background-color .3s, color .3s;
-        &:hover{
+        &:hover, &:focus{
             background-color: $btn-color;
             color: white;
         }

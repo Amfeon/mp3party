@@ -1,6 +1,6 @@
 import './css/main.scss'
 import addToPlayList from './playlist-menu';
-
-document.querySelector('.add-favorites-btn').addEventListener('click', addToPlayList);
-
-
+const favor = document.querySelector('.add-more-btn');
+if(favor){
+    favor.addEventListener('click', addToPlayList);
+}

@@ -94,7 +94,8 @@ $playlist-title: #9BAEB5;
     display: flex;
     align-items: center;
     cursor: pointer;
-
+    text-decoration: none;
+    outline: none;
     &__icon{
         transition:  background-color .3s;
         display: flex;
@@ -102,6 +103,7 @@ $playlist-title: #9BAEB5;
         justify-content: center;
         width:30px;
         height:30px;
+        border-radius: 50%;
     }
     &__title{
         font-size: 16px;
@@ -115,9 +117,9 @@ $playlist-title: #9BAEB5;
         line-height: 20px;
         color: $playlist-title;
     }
-    &:hover .playlistItem__icon{
-        border-radius: 50%;
-        background-color: rgba(210, 218, 221, 0.7);
+    &:hover .playlistItem__icon, &:focus .playlistItem__icon{
+        
+        background-color: rgba($btn-color , .7);
     }
 }
 
