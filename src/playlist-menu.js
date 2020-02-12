@@ -15,7 +15,7 @@ const addToPlayList = function(){
     playlistMenu.classList.add('playlistMenu_animation');
     setTimeout(()=>{
         newList.focus();  
-    },0)
+    },1000)
     keyboardNav(playlistMenu);
     newList.addEventListener('click', newTitleList);
     overlay.addEventListener('click',(e)=>{
@@ -29,7 +29,8 @@ const addToPlayList = function(){
  }
 
 
- const newTitleList = function(){
+ const newTitleList = function(e){
+    e.preventDefault();
     keyboardNav(addForm);
     cancelPlaylistMenu()
     addFormAnim.classList.add('add-form_animation');
@@ -67,21 +68,20 @@ const addListener = function(){
 }
 const checkedPlayilist = function(e){
     e.preventDefault();
-    //TODO: сделать запрос на сервер
-    console.log('ass');
+    //TODO: сделать запрос на сервер    
     alert(`trackId ${songId} and Playlist id - ${this.dataset.playlistId}`);
     cancelPlaylistMenu();
 }
 const keyboardNav = function(modal){
-    console.log(modal);
-    /**asdf*/ 
+    /**asdf*/
+     console.log('asd');
     let focusableElementsString = 'a[href], input:not([disabled]), button:not([disabled]), [tabindex="0"]';
     let focusableElements = modal.querySelectorAll(focusableElementsString);
     focusableElements = Array.prototype.slice.call(focusableElements);    
     let firstTabStop = focusableElements[0];
     let lastTabStop = focusableElements[focusableElements.length - 1];
-    modal.addEventListener('keydown', (e)=>{
-        
+    modal.addEventListener('keydown', (e)=>{   
+ 
         if (e.keyCode === 27){
             cancelAddForm();
             cancelPlaylistMenu();

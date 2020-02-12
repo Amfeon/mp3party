@@ -117,8 +117,7 @@ $playlist-title: #9BAEB5;
         line-height: 20px;
         color: $playlist-title;
     }
-    &:hover .playlistItem__icon, &:focus .playlistItem__icon{
-        
+    &:hover .playlistItem__icon{
         background-color: rgba($btn-color , .7);
     }
 }
