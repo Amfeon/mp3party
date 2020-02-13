@@ -1,7 +1,7 @@
 @import 'playlist-add';
 
-$playlist-title: #9BAEB5;
-
+$playlist-title : #9BAEB5;
+$bc-icon        : #F0F5F5;
 .overlay{
     display: none;
     justify-content: center;
@@ -101,9 +101,12 @@ $playlist-title: #9BAEB5;
         display: flex;
         align-items: center;
         justify-content: center;
-        width:30px;
-        height:30px;
+        width:40px;
+        height:40px;
         border-radius: 50%;
+        &_active{
+            background-color:$bc-icon;
+        }
     }
     &__title{
         font-size: 16px;
@@ -116,9 +119,17 @@ $playlist-title: #9BAEB5;
         font-size: 14px;
         line-height: 20px;
         color: $playlist-title;
+        &_m0p15{
+            margin-left: 0;
+            padding-left: 25px;
+        }
+    }
+    &__wrapper{
+        display:flex;
+        flex-direction: column;
     }
     &:hover .playlistItem__icon{
-        background-color: rgba($btn-color , .7);
+        background-color:$bc-icon;
     }
 }
 

@@ -6,6 +6,9 @@
         align-items: center;
         border-bottom:1px solid #EAEAEA;
     }
+    &__body{
+        padding: 15px 20px;
+    } 
     &__title{
         font-family: 'Roboto' sans-serif;
         font-style: normal;
@@ -26,13 +29,12 @@
             }
         }
     }
-    &__body{
-        padding: 25px 10px;
-    }
+
 }
 .favoritePlaylist{
     display: flex;
     cursor: pointer;
+    text-decoration: none;
     &__logo{
         width:96px;
         height: 96px;
@@ -40,30 +42,62 @@
         flex-wrap: wrap;
         position: relative;
         background-color: $btn-color;
-        &:after{
-            content: '';
-            width:30px;
-            height: 30px;
-            position: absolute;
-            left:25px;
-            top:25px;
-            background-color: #fff;
-            transition: .3s;
-            cursor: pointer;
-            visibility: hidden;
-            opacity: 0;
-        }
-        &:hover{
-            &:after{
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-    &__image{
+        // &:after{
+        //     content: '';
+        //     width:48px;
+        //     height: 48px;
+        //     position: absolute;
+        //     left:25px;
+        //     top:25px;
+        //     background: url(img/Star7.svg) no-repeat;
+        //     background-size: contain;
+        //     transition: .3s;
+        //     cursor: pointer;
+        // }
+        // &:hover{
+        //     &:after{
+        //         content: '';
 
+        //     }
+        // }
+    }
+    // &__image{
+
+    // }
+    &__icon{
+        top:26px;
+        left:27px;
+        position:absolute;
+        width:45px;
+        height:45px;
+    }
+    &__icon-path{
+        transition: .3s;
+        fill:rgba($color: #000000, $alpha: 0);
+        stroke:#A6CFE2;
+        stroke-linecap:square;
+        fill-rule:evenodd;
+        stroke-width:1px;        
+    }
+    &:hover{
+        .favoritePlaylist__icon-path{
+            fill:#FFD101;
+            stroke:#FFD101;
+        }
     }
     &__info{
-
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+    &__title{
+        font-size: 16px;
+        line-height: 24px;
+        color: #010D11;
+    }
+    &__subtitle{
+        font-size: 12px;
+        line-height: 20px;
+        color: #9BAEB5;
     }
 }

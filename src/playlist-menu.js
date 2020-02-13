@@ -7,26 +7,26 @@ const addFormAnim = addForm.querySelector('.add-form');
 const body = document.querySelector('body');
 const playlistMass = playlistMenu.querySelectorAll('.playlistItem')
 let songId;
-const addToPlayList = function(){
-    addListener();
-    songId= this.dataset.songId;
-    body.style.overflow = 'hidden';
-    overlay.classList.add('overlay_visible');
-    playlistMenu.classList.add('playlistMenu_animation');
-    setTimeout(()=>{
-        newList.focus();  
-    },1000)
-    keyboardNav(playlistMenu);
-    newList.addEventListener('click', newTitleList);
-    overlay.addEventListener('click',(e)=>{
-       if(e.target===overlay){
-        cancelPlaylistMenu()
-        body.style.overflow = '';
-       }
-    })
-     document.getElementById('cancel').addEventListener('click', cancelAddForm);
-     document.getElementById('send').addEventListener('click', submitNewPlayList)
- }
+// const addToPlayList = function(){
+//     addListener();
+//     songId= this.dataset.songId;
+//     body.style.overflow = 'hidden';
+//     overlay.classList.add('overlay_visible');
+//     playlistMenu.classList.add('playlistMenu_animation');
+//     setTimeout(()=>{
+//         newList.focus();  
+//     },1000)
+//     keyboardNav(playlistMenu);
+//     newList.addEventListener('click', newTitleList);
+//     overlay.addEventListener('click',(e)=>{
+//        if(e.target===overlay){
+//         cancelPlaylistMenu()
+//         body.style.overflow = '';
+//        }
+//     })
+//      document.getElementById('cancel').addEventListener('click', cancelAddForm);
+//      document.getElementById('send').addEventListener('click', submitNewPlayList)
+//  }
 
 
  const newTitleList = function(e){
@@ -41,17 +41,17 @@ const addToPlayList = function(){
         input.selectionStart = input.value.length;
     },0)
 }
-const cancelAddForm = function(){    
-   body.style.overflow = '';
-   addFormAnim.classList.remove('add-form_animation');
-   addForm.classList.remove('overlay_visible');
-}
+// const cancelAddForm = function(){    
+//    body.style.overflow = '';
+//    addFormAnim.classList.remove('add-form_animation');
+//    addForm.classList.remove('overlay_visible');
+// }
 
-const cancelPlaylistMenu = function(){
-    overlay.classList.remove('overlay_visible');
-    playlistMenu.classList.remove('playlistMenu_visible');
-    playlistMenu.classList.remove('playlistMenu_animation');
-}
+// const cancelPlaylistMenu = function(){
+//     overlay.classList.remove('overlay_visible');
+//     playlistMenu.classList.remove('playlistMenu_visible');
+//     playlistMenu.classList.remove('playlistMenu_animation');
+// }
 
 const submitNewPlayList = function(){
     body.style.overflow = '';
@@ -59,19 +59,19 @@ const submitNewPlayList = function(){
     alert(`trackId ${songId} and Playlist titlt - ${input.value}`)
     cancelAddForm();
 }
-const addListener = function(){
-    playlistMass.forEach((item)=>{
-        if(item.id!="new-list"){  
-            item.addEventListener('click', checkedPlayilist)
-        }
-    })
-}
-const checkedPlayilist = function(e){
-    e.preventDefault();
-    //TODO: сделать запрос на сервер    
-    alert(`trackId ${songId} and Playlist id - ${this.dataset.playlistId}`);
-    cancelPlaylistMenu();
-}
+// const addListener = function(){
+//     playlistMass.forEach((item)=>{
+//         if(item.id!="new-list"){  
+//             item.addEventListener('click', checkedPlayilist)
+//         }
+//     })
+// }
+// const checkedPlayilist = function(e){
+//     e.preventDefault();
+//     //TODO: сделать запрос на сервер    
+//     alert(`trackId ${songId} and Playlist id - ${this.dataset.playlistId}`);
+//     cancelPlaylistMenu();
+// }
 const keyboardNav = function(modal){
     /**asdf*/
      console.log('asd');
