@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <script src="https://use.fontawesome.com/849b015195.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="myplaylist">
+        <div class="myplaylist__header">
+            <a  href="my-music.html" title="Назад к списку плейлистов" class="myplaylist__action">
+                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="myplaylist__headerIconPath" d="M8.70711 14.2929C9.09763 14.6834 9.09763 15.3166 8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071L0.292893 8.70711C-0.0976311 8.31658 -0.0976311 7.68342 0.292893 7.29289L7.29289 0.292893C7.68342 -0.0976315 8.31658 -0.0976315 8.70711 0.292893C9.09763 0.683417 9.09763 1.31658 8.70711 1.70711L2.41421 8L8.70711 14.2929Z" fill="#010D11"/>
+                </svg>                    
+            </a>
+            <input type="text" class="myplaylist__title js-title" value="Для Тренировок" disabled>
+            <button  type="button" class="myplaylist__action js-edit">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="myplaylist__headerIconPath" fill-rule="evenodd" clip-rule="evenodd" d="M21.2777 6.96638C22.0609 6.18317 22.0609 4.91815 21.2807 4.13792L19.8635 2.72076C19.0859 1.94318 17.8169 1.94186 17.0351 2.72374L7.13707 12.6217L6.20298 16.3443C5.93482 17.413 6.585 18.0675 7.65712 17.7985L11.3797 16.8644L21.2777 6.96638ZM4.00087 20L18 19.9969V13.0007C18 12.4484 18.4477 12.0007 19 12.0007C19.5523 12.0007 20 12.4484 20 13.0007V19.9969C20 21.1033 19.1075 22 17.9991 22H4.00087C2.89515 22 2 21.107 2 19.9991V6.00084C2 4.89442 2.89658 3.99996 4.00492 3.99996H11.0149C11.5672 3.99996 12.0149 4.44768 12.0149 4.99996C12.0149 5.55225 11.5672 5.99996 11.0149 5.99996L4 6.00084L4.00087 20ZM10.3483 15.0674L8.47385 15.5276L8.94318 13.645L9.61249 12.9758L11.0262 14.3895L10.3483 15.0674ZM16.328 6.25629L17.7422 7.67349L12.4404 12.9753L11.0268 11.5617L16.328 6.25629Z"/>
+                </svg>
+            </button>
+            <button  type="button" class="myplaylist__action myplaylist__action_hidden js-playlist-trash" data-playlist-id="10">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="myplaylist__headerIconPath" d="M17.0016 22C18.1029 22 19 21.1047 19 20.0004V7C19.5558 6.99953 20 6.552 20 6C20 5.44386 19.5519 5 18.9991 5H14C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5H5.00087C4.44463 5 4 5.44772 4 6C4 6.55584 4.44763 6.99953 5 7V20.0004C5 21.1066 5.89472 22 6.99842 22H17.0016ZM17.0016 20C17.0016 20 7 20.0014 7 20.0004V7H17C16.9998 10.203 16.9996 20 17.0016 20ZM13 9.99754C13 9.44662 13.4439 9 14 9C14.5523 9 15 9.44631 15 9.99754V17.0025C15 17.5534 14.5561 18 14 18C13.4477 18 13 17.5537 13 17.0025V9.99754ZM10 9C9.44386 9 9 9.44662 9 9.99754V17.0025C9 17.5537 9.44772 18 10 18C10.5561 18 11 17.5534 11 17.0025V9.99754C11 9.44631 10.5523 9 10 9Z" />
+                </svg>
+            </button>
+            <button  type="button" class="myplaylist__action myplaylist__action_hidden js-done">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.20711 11.7929C2.81658 11.4024 2.18342 11.4024 1.79289 11.7929C1.40237 12.1834 1.40237 12.8166 1.79289 13.2071L7.79289 19.2071C8.18342 19.5976 8.81658 19.5976 9.20711 19.2071L22.2071 6.20711C22.5976 5.81658 22.5976 5.18342 22.2071 4.79289C21.8166 4.40237 21.1834 4.40237 20.7929 4.79289L8.5 17.0858L3.20711 11.7929Z" fill="#320099"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="myplaylist__body">
+            <div class="track">
+                <div class="track__imageWrapper">
+                    <img class="track__image" src="images/Art.png"    alt="" width="48" height="48">
+                </div>                
+                <div class="track__content">
+                    <div class="track__title">Что то там такое</div>
+                    <div class="track__author">автор неизвестен</div>
+                    <div class="track__infoWrapper">
+                            <div class="track__info">3:30</div>
+                            <div class="track__info">2.7 Мб</div>                            
+                            <div class="track__info">320 кб/с</div>
+                    </div>
+                </div>
+                <div class="track__btnWrapper">     
+                    <button type="button" href="#" class="track__btn js-favorite" data-song-id="22222">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="track__icon track__icon_favorite"  stroke-linecap="miter" fill-rule="evenodd" stroke-width="2" d="M16.5706 21.6187C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9876 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01185 20.7313 8.81319L15.6046 8.06823C15.6544 8.07548 13.3453 3.44697 13.3453 3.44697C12.7344 2.20906 11.2776 2.20812 10.6662 3.44697L8.37348 8.09256C8.39578 8.04739 3.28026 8.81319 3.28026 8.81319C1.91414 9.0117 1.46308 10.3969 2.45236 11.3612L6.16209 14.9773C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6187L12.0265 19.2079C11.9819 19.2314 16.5706 21.6187 16.5706 21.6187Z" />
+                         </svg>
+                    </button>               
+                    <button type="button"  class="track__btn js-add-more-btn"  data-song-id="22222">
+                        <svg class="more" width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="track__icon track__icon_more"  fill-rule="evenodd" clip-rule="evenodd" d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" />
+                        </svg> 
+                    </button>
+                    <button type="button" href="#" class="track__btn track__btn_hidden js-trash" data-song-id="2222" data-playlist-id="10">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="track__icon track__icon_more"  fill-rule="evenodd" clip-rule="evenodd" d="M17.0016 22C18.1029 22 19 21.1047 19 20.0004V7C19.5558 6.99953 20 6.552 20 6C20 5.44386 19.5519 5 18.9991 5H14C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5H5.00087C4.44463 5 4 5.44772 4 6C4 6.55584 4.44763 6.99953 5 7V20.0004C5 21.1066 5.89472 22 6.99842 22H17.0016ZM17.0016 20C17.0016 20 7 20.0014 7 20.0004V7H17C16.9998 10.203 16.9996 20 17.0016 20ZM13 9.99754C13 9.44662 13.4439 9 14 9C14.5523 9 15 9.44631 15 9.99754V17.0025C15 17.5534 14.5561 18 14 18C13.4477 18 13 17.5537 13 17.0025V9.99754ZM10 9C9.44386 9 9 9.44662 9 9.99754V17.0025C9 17.5537 9.44772 18 10 18C10.5561 18 11 17.5534 11 17.0025V9.99754C11 9.44631 10.5523 9 10 9Z" fill="#A6CFE2"/>
+                        </svg>
+                    </button>                          
+                </div>
+            </div>
+            <div class="track">
+                <div class="track__imageWrapper">
+                    <img class="track__image" src="images/Art.png"    alt="" width="48" height="48">
+                </div>                
+                <div class="track__content">
+                    <div class="track__title">Что то такм такое</div>
+                    <div class="track__author">автор неизвестен</div>
+                    <div class="track__infoWrapper">
+                            <div class="track__info">3:30</div>
+                            <div class="track__info">2.7 Мб</div>                            
+                            <div class="track__info">320 кб/с</div>
+                    </div>
+                </div>
+                <div class="track__btnWrapper">     
+                    <button type="button" href="#" class="track__btn  js-favorite" data-song-id="111111">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="track__icon track__icon_active"  stroke-linecap="miter" fill-rule="evenodd" stroke-width="2" d="M16.5706 21.6187C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9876 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01185 20.7313 8.81319L15.6046 8.06823C15.6544 8.07548 13.3453 3.44697 13.3453 3.44697C12.7344 2.20906 11.2776 2.20812 10.6662 3.44697L8.37348 8.09256C8.39578 8.04739 3.28026 8.81319 3.28026 8.81319C1.91414 9.0117 1.46308 10.3969 2.45236 11.3612L6.16209 14.9773C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6187L12.0265 19.2079C11.9819 19.2314 16.5706 21.6187 16.5706 21.6187Z" />
+                         </svg>
+                    </button>               
+                    <button type="button"  class="track__btn js-add-more-btn" data-song-id="111111">
+                        <svg class="more" width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="track__icon track__icon_more"  fill-rule="evenodd" clip-rule="evenodd" d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" />
+                        </svg> 
+                    </button>  
+                    <button type="button" href="#" class="track__btn track__btn_hidden js-trash" data-song-id="111111" data-playlist-id="10">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="track__icon track__icon_more"  fill-rule="evenodd" clip-rule="evenodd" d="M17.0016 22C18.1029 22 19 21.1047 19 20.0004V7C19.5558 6.99953 20 6.552 20 6C20 5.44386 19.5519 5 18.9991 5H14C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5H5.00087C4.44463 5 4 5.44772 4 6C4 6.55584 4.44763 6.99953 5 7V20.0004C5 21.1066 5.89472 22 6.99842 22H17.0016ZM17.0016 20C17.0016 20 7 20.0014 7 20.0004V7H17C16.9998 10.203 16.9996 20 17.0016 20ZM13 9.99754C13 9.44662 13.4439 9 14 9C14.5523 9 15 9.44631 15 9.99754V17.0025C15 17.5534 14.5561 18 14 18C13.4477 18 13 17.5537 13 17.0025V9.99754ZM10 9C9.44386 9 9 9.44662 9 9.99754V17.0025C9 17.5537 9.44772 18 10 18C10.5561 18 11 17.5534 11 17.0025V9.99754C11 9.44631 10.5523 9 10 9Z" fill="#A6CFE2"/>
+                        </svg>
+                    </button>                          
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- Модальные окна -->
+<div class="overlay">
+    
+    <div class="playlistMenu" id="playlistMenu">
+        <div class="playlistMenu__header">
+            <div class="playlistMenu__title">
+                Добавить в плейлист
+            </div>
+                <a href="#" class="playlistItem"  id="new-list" >
+                    <div class="playlistItem__icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.999854C10 0.444946 9.55229 0 9 0C8.44386 0 8 0.44765 8 0.999854V8H0.999854C0.444946 8 0 8.44771 0 9C0 9.55614 0.44765 10 0.999854 10H8V17.0001C8 17.5551 8.44771 18 9 18C9.55614 18 10 17.5524 10 17.0001V10H17.0001C17.5551 10 18 9.55229 18 9C18 8.44386 17.5524 8 17.0001 8H10V0.999854Z" fill="#EF3E4A"/>
+                        </svg>
+                    </div>
+                    <div class="playlistItem__title">Новый Плейлист</div>
+                </a>
+        </div>
+        <div class="playlistMenu__body">
+            <a href="#" class="playlistItem" data-playlist-id="5">
+                <div class="playlistItem__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5706 21.6186C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9875 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01182 20.7313 8.81316L15.6046 8.0682C15.6544 8.07545 13.3453 3.44694 13.3453 3.44694C12.7344 2.20903 11.2776 2.20809 10.6662 3.44694L8.37348 8.09253C8.39578 8.04736 3.28026 8.81316 3.28026 8.81316C1.91414 9.01167 1.46308 10.3968 2.45236 11.3612L6.16209 14.9772C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6186L12.0265 19.2079C11.9819 19.2313 16.5706 21.6186 16.5706 21.6186Z" fill="#ffb300"/>
+                    </svg>
+                </div>
+                <div class="playlistItem__title">Избранное</div>
+                <div class="playlistItem__count">137</div>
+            </a>
+
+        <a href="#" class="playlistItem" data-playlist-id="10">
+            <div class="playlistItem__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3C14.4633 3 13.0615 3.57771 12 4.52779C10.9385 3.57771 9.53671 3 8 3C4.68629 3 2 5.68629 2 9C2 13.8365 6.97858 18.511 11.5783 21.2383C11.8112 21.3828 12.1924 21.3809 12.4246 21.2363C16.994 18.5 22 13.8362 22 9C22 5.68629 19.3137 3 16 3ZM12.0057 19.1333C7.06067 15.9005 4 12.1242 4 9C4 6.79086 5.79086 5 8 5C8.99954 5 9.93695 5.36538 10.6662 6.01806L11.6285 6.87932C11.8364 7.06548 12.1663 7.06298 12.3715 6.87932L13.3338 6.01806C14.0631 5.36538 15.0005 5 16 5C18.2091 5 20 6.79086 20 9C20 12.2045 16.9507 15.9005 12.0057 19.1333Z" fill="#A6CFE2"/>
+                </svg>                        
+            </div>
+            <div class="playlistItem__title">Авто</div>
+            <div class="playlistItem__count">13</div>
+        </a>
+    </div>
+    </div>
+    
+</div>
+
+
+<div class="overlay" id="add-form">
+        <div role="dialog" class="add-form">
+            <div class="add-form__header">
+                <svg width="18" height="18" viewBox="0 0 18 18"  xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.999854C10 0.444946 9.55229 0 9 0C8.44386 0 8 0.44765 8 0.999854V8H0.999854C0.444946 8 0 8.44771 0 9C0 9.55614 0.44765 10 0.999854 10H8V17.0001C8 17.5551 8.44771 18 9 18C9.55614 18 10 17.5524 10 17.0001V10H17.0001C17.5551 10 18 9.55229 18 9C18 8.44386 17.5524 8 17.0001 8H10V0.999854Z" />
+                </svg>
+                 <h4> Новый плейлист</h3>
+            </div>
+            <div class="add-form__body">
+                <input type="text" class="add-form__input" value="Моя музыка" >
+                <div class="add-form__btnGroup">
+                    <button type="button" class="add-form__btn" id="cancel">Отмена</button>
+                    <button type="button" class="add-form__btn" id="send">Создать</button>
+                </div>
+            </div>         
+        </div>
+</div>
+
+
+
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>

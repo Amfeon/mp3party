@@ -1,10 +1,10 @@
 @import "grid";
-// @import 'playlist';
-@import 'myPlayLists';
-// @import 'currentPlayList';
+@import "var";
 
+@import 'playlist-add';
 @import 'playlist-menu';
 @import 'myplaylist';
+@import 'playlist';
 $bg-color       :     #eaeaea;
 $bg-card        :     #fff;
 $subtitle       :     #db4433;
