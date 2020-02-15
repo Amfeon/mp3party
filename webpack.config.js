@@ -74,8 +74,8 @@ module.exports ={
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
-            template: './src/my-music.html',
-            filename: 'my-music.html'
+            template: './src/index.html',
+            filename: 'index.html'
         })
     ]
 };
