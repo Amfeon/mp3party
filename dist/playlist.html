@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="track__btnWrapper">     
-                    <button type="button" href="#" class="track__btn js-favorite" data-song-id="22222">
+                    <button type="button" href="#" class="track__btn js-favorite" data-song-id="22222" data-favorite='0'> 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="track__icon track__icon_favorite"  stroke-linecap="miter" fill-rule="evenodd" stroke-width="2" d="M16.5706 21.6187C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9876 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01185 20.7313 8.81319L15.6046 8.06823C15.6544 8.07548 13.3453 3.44697 13.3453 3.44697C12.7344 2.20906 11.2776 2.20812 10.6662 3.44697L8.37348 8.09256C8.39578 8.04739 3.28026 8.81319 3.28026 8.81319C1.91414 9.0117 1.46308 10.3969 2.45236 11.3612L6.16209 14.9773C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6187L12.0265 19.2079C11.9819 19.2314 16.5706 21.6187 16.5706 21.6187Z" />
                          </svg>
@@ -83,9 +83,9 @@
                     </div>
                 </div>
                 <div class="track__btnWrapper">     
-                    <button type="button" href="#" class="track__btn  js-favorite" data-song-id="111111">
+                    <button type="button" href="#" class="track__btn  js-favorite" data-song-id="111111" data-favorite='0'>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="track__icon track__icon_active"  stroke-linecap="miter" fill-rule="evenodd" stroke-width="2" d="M16.5706 21.6187C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9876 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01185 20.7313 8.81319L15.6046 8.06823C15.6544 8.07548 13.3453 3.44697 13.3453 3.44697C12.7344 2.20906 11.2776 2.20812 10.6662 3.44697L8.37348 8.09256C8.39578 8.04739 3.28026 8.81319 3.28026 8.81319C1.91414 9.0117 1.46308 10.3969 2.45236 11.3612L6.16209 14.9773C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6187L12.0265 19.2079C11.9819 19.2314 16.5706 21.6187 16.5706 21.6187Z" />
+                            <path class="track__icon track__icon_favorite"  stroke-linecap="miter" fill-rule="evenodd" stroke-width="2" d="M16.5706 21.6187C17.7924 22.261 18.9716 21.4055 18.738 20.0439L17.8623 14.9379C17.8708 14.9876 21.5592 11.3612 21.5592 11.3612C22.5477 10.3976 22.0985 9.01185 20.7313 8.81319L15.6046 8.06823C15.6544 8.07548 13.3453 3.44697 13.3453 3.44697C12.7344 2.20906 11.2776 2.20812 10.6662 3.44697L8.37348 8.09256C8.39578 8.04739 3.28026 8.81319 3.28026 8.81319C1.91414 9.0117 1.46308 10.3969 2.45236 11.3612L6.16209 14.9773C6.12602 14.9421 5.27355 20.0439 5.27355 20.0439C5.04019 21.4045 6.21819 22.2615 7.441 21.6187L12.0265 19.2079C11.9819 19.2314 16.5706 21.6187 16.5706 21.6187Z" />
                          </svg>
                     </button>               
                     <button type="button"  class="track__btn js-add-more-btn" data-song-id="111111">
@@ -103,9 +103,9 @@
     </div>
 </div>
 
+
 <!-- Модальные окна -->
 <div class="overlay">
-    
     <div class="playlistMenu" id="playlistMenu">
         <div class="playlistMenu__header">
             <div class="playlistMenu__title">
@@ -121,6 +121,7 @@
                 </a>
         </div>
         <div class="playlistMenu__body">
+            <!-- Список плейлистов -->
             <a href="#" class="playlistItem" data-playlist-id="5">
                 <div class="playlistItem__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,8 +142,7 @@
             <div class="playlistItem__count">13</div>
         </a>
     </div>
-    </div>
-    
+    </div> 
 </div>
 
 

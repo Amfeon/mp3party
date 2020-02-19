@@ -46,12 +46,13 @@
         align-items: center;
         padding: 0;
         width: 24px;
-        height: 24px;     
+        height: 24px; 
+        outline: none;    
         cursor: pointer;   
         &:hover{
             .track__icon{
                 fill:#FFD101;
-                stroke:#aaD101;
+                stroke:#FFD101;
             }
             .track__icon_more{
                 fill:#EF3E4A;
@@ -74,42 +75,23 @@
             stroke:none;
         }  
 
-        &_active{
-            fill:#FFD101;
-            stroke:#FFD101;
-        }
+
         &_favorite{
             fill:rgba(black, 0);
             stroke:#A6CFE2;
-            stroke-linecap:round;
+            stroke-linecap:square;
+            stroke-linejoin:round;
             fill-rule:evenodd;
             stroke-width:2px; 
             &:hover{
                 fill:#FFD101;
-                stroke:#aaD101;
-            }  
+                stroke:#FFD101;
+            }              
         }
-        // &_more{
-        //     stroke-linecap:none;
-        //     fill-rule:evenodd;
-        //     stroke:none;
-        //     fill:#A6CFE2;
-        //     width:16px;
-        //     &:hover{
-        //         fill:#EF3E4A;
-        //         stroke:none;
-        //     }
-        // }
-        // &_trash{
-        //     stroke-linecap:none;
-        //     fill-rule:evenodd;
-        //     stroke:none;
-        //     fill:#A6CFE2;
-        //     &:hover{
-        //         fill:#EF3E4A;
-        //         stroke:none;
-        //     }
-        // }
+        &_active{
+            fill:rgba(255, 208, 0, 1);
+            stroke:#FFD101;
+        }
     }
 
 }

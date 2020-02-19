@@ -7,12 +7,11 @@ export default class AddToPlaylist{
             this.input = this.addForm.querySelector('.add-form__input');
             this.addFormAnim = this.addForm.querySelector('.add-form'); // элемент для анимации выпадания формы
             this.body = document.querySelector('body');
-            this.playlistMass = this.playlistMenu.querySelectorAll('.playlistItem')
+            this.playlistMass = this.playlistMenu.querySelectorAll('.playlistItem');
             this.songId=songId;        
     }
     getSongId(){
         this.songId= this.dataset.songId;
-
     }
     addToPlayList(){
         console.log(this.songId);

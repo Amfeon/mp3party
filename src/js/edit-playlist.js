@@ -42,6 +42,9 @@ function start(){
             newPlaylist.newTitlePlaylist(); 
         } )
     }
+    if(favor.length!=0){
+        addFavorListener();
+    }
 }
 
 function editModePlaylist(){
@@ -80,4 +83,34 @@ function doneEditPlaylist(){
         trackTrash[i].classList.toggle('track__btn_hidden');
     }
 }
+
+function addFavorListener(){
+
+    favor.forEach((item)=>{
+        const icon = item.querySelector('.track__icon');   
+    if(item.dataset.favorite!='0' && item.dataset.favorite!=''){
+        icon.classList.add('track__icon_active');        
+    }
+    else{
+        icon.classList.remove('track__icon_active');
+    }
+        
+        
+        item.addEventListener('click', addToFavoritePlaylist);
+    })
+}
+function addToFavoritePlaylist(){
+    let id =this.dataset.songId;
+    const icon = this.querySelector('.track__icon');
+    if(this.dataset.favorite!='0' && this.dataset.favorite!=''){
+        this.dataset.favorite = '0';
+        icon.classList.remove('track__icon_active');
+    }
+    else{
+        this.dataset.favorite = '1';
+        icon.classList.add('track__icon_active');
+    }
+    alert(`id песни ${id}`);
+}
+
 export default start
