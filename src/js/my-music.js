@@ -1,15 +1,16 @@
 
 export default class CreateNewPlaylist{
-    constructor(){
+    constructor(renderFunction){
+      //TODO: ссылку на перерендер плейлиста
          this.addForm = document.querySelector("#add-form"); // форма с overlay      
          this.input = this.addForm.querySelector('.add-form__input');
          this.addFormAnim = this.addForm.querySelector('.add-form'); // элемент для анимации выпадания формы
          this.body = document.querySelector('body'); // скрытие scroll
+         this.renderPlaylist = renderFunction;
          document.getElementById('cancel').onclick = ()=>{this.cancelAddForm()};
          document.getElementById('send').onclick= ()=>{this.submitNewPlayList()};
     }
     newTitlePlaylist(){
-
         this.keyboardNav(this.addForm);
         this.addFormAnim.classList.add('add-form_animation');
         this.addForm.classList.add('overlay_visible');
@@ -49,11 +50,12 @@ export default class CreateNewPlaylist{
         this.addFormAnim.classList.remove('add-form_animation');
         this.addForm.classList.remove('overlay_visible');
         }
-        submitNewPlayList(){
-            this.body.style.overflow = '';
-            //TODO: сделать запрос на сервер и в зависимости от backend дальнейште действия
-            alert(` Playlist title - ${this.input.value}`)
-            this.cancelAddForm();
+    submitNewPlayList(){
+        this.body.style.overflow = '';
+        //TODO: сделать запрос на сервер и в зависимости от backend дальнейште действия
+        alert(` Playlist title - ${this.input.value}`);
+        this.renderPlaylist();
+        this.cancelAddForm();
         }
 
 }
